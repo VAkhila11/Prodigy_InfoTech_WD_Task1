@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prodigy InfoTech_WD_Task-1</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav id="navbar">
+      <div class="container">
+        <h1 class="logo">Prodigy InfoTech</h1>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <div class="container">
+      <h2>Welcome to Prodigy InfoTech</h2>
+      <p>Your destination for innovative solutions.</p>
+      <a href="#about" class="btn">Learn More</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>Elevate your skills, complete Certified internships and be part of a vibrant community committed to empower the next generation of tech enthusiasts.</p>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <ul>
+        <li>Web Development</li>
+        <li>Mobile App Development</li>
+        <li>UI/UX Design</li>
+        <li>Digital Marketing</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Email: info@prodigyinfotech.com</p>
+      <p>Phone: 123-456-7890</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Pardiotech. All rights reserved.</p>
+    </div>
+  </footer>
+  <script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Scroll-triggered animation for hero section
+    window.addEventListener('scroll', function() {
+      var hero = document.getElementById('hero');
+      var heroPosition = hero.getBoundingClientRect().top;
+      var windowHeight = window.innerHeight;
+
+      if (heroPosition < windowHeight / 2) {
+        hero.classList.add('animate');
+      }
+    });
+  </script>
+</body>
+</html>
